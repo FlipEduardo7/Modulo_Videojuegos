@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+        <menuitem name="Videojuegos LTC" id="videojuegos_menu" sequence="20"/>
+        <menuitem name="Catalogos" id="videojuegos_menu_catalogos" parent="videojuegos_menu" sequence="10"/>
+
+        <menuitem name="Clasificaciones" id="videojuegos_clasificaciones_menu"  action="videojuegos_clasificaciones_action" parent="videojuegos_menu_catalogos"  sequence="40"/>
+        
+        <menuitem name="Productos" id="videojuegos_productos_menu"  action="videojuegos_productos_action" parent="videojuegos_menu_catalogos" sequence="50"/>
+    
+        <menuitem name="Procesos" id="videojuegos_menu_procesos" parent="videojuegos_menu"  sequence="20"/>
+        <menuitem name="Ventas" id="videojuegos_ventas_menu" action="videojuegos_ventas_action" parent="videojuegos_menu_procesos" sequence="0"/>
+
+    </data>
+</odoo>

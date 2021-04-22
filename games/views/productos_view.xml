@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="view_form_videojuegos" model="ir.ui.view">
+        <field name="name">Videojuegos Form</field>
+        <field name="model">games.clasificaciones</field>
+        <field name="arch" type="xml">
+            <form string="Clasificaciones">
+               <!-- <group name="group_top"> -->
+                    <group>
+                        <field name="name"/>
+                    </group>
+                    <group>
+                        <field name="productos" widget="many2many"/>
+                    </group>
+                    <group colspan="12">
+                        <field name="producto_ids" nolabel="1">
+                            <tree string="Productos" editable="top">
+                                <field name="name" />
+                                <field name="precio" />
+                                <field name="costo" />
+                                <field name="tipo" />
+                            </tree>
+                        </field>
+                    </group>
+             <!--   </group>-->
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tree_clasificaciones" model="ir.ui.view">
+        <field name="name">Clasificaciones Tree</field>
+        <field name="model">games.clasificaciones</field>
+        <field name="arch" type="xml">
+            <tree string="Clasificaciones">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="videojuegos_clasificaciones_action" model="ir.actions.act_window">
+        <field name="name">Clasificaciones</field>
+        <field name="res_model">games.clasificaciones</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="view_form_videojuegos2" model="ir.ui.view">
+        <field name="name">Videojuegos Form</field>
+        <field name="model">games.productos</field>
+        <field name="arch" type="xml">
+            <form string="Productos">
+                <group colspan="12">
+                    <field name="foto" widget="image" class="oe_avatar oe_left"/>
+                </group>
+                <label for="name">Nombre</label>
+                <field name="name"/>
+                <label for="precio">Precio</label>
+                <field name="precio"/>
+                <label for="costo">Costo</label>
+                <field name="costo"/>
+                <label for="tipo">Tipo</label>
+                <field name="tipo"/>
+                <label for="clasif">Clasificacion</label>
+                <field name="clasif"/>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tree_productos" model="ir.ui.view">
+        <field name="name">Productos Tree</field>
+        <field name="model">games.productos</field>
+        <field name="arch" type="xml">
+            <tree string="Productos">
+                <field name="foto" widget="foto"/>
+                <field name="name"/>
+                <field name="precio"/>
+                <field name="costo"/>
+                <field name="tipo"/>
+                <field name="stock"/>
+                <field name="clasif"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="videojuegos_productos_action" model="ir.actions.act_window">
+        <field name="name">Productos</field>
+        <field name="res_model">games.productos</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

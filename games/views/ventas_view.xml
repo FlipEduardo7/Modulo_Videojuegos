@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="videojuegos_ventas_form" model="ir.ui.view">
+        <field name="name">videojuegos ventas form</field>
+        <field name="model">games.ventas</field>
+        <field name="arch" type="xml">
+            <form string="Ventas">
+                <group>
+                    <field name="name"/>
+                    <field name="fecha"/>
+                    <field name="cliente"/>
+                    <field name="tipos"/>
+                    <field name="total"/>
+                </group>
+                <group>
+                    <field name="productos" nolabel="1">
+                        <tree editable="buttom">
+                            <field name="producto"/>
+                            <field name="cantidad"/>
+                            <field name="precio"/>
+                            <field name="importe"/>
+                        </tree>
+                    </field>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="videojuegos_ventas_tree" model="ir.ui.view">
+        <field name="name">Ventas Tree</field>
+        <field name="model">games.ventas</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="fecha"/>
+                <field name="cliente"/>
+                <field name="tipos"/>
+                <field name="total"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="videojuegos_ventas_action" model="ir.actions.act_window">
+        <field name="name">Ventas</field>
+        <field name="res_model">games.ventas</field>
+        <field name="view_mode">tree, form</field>
+    </record>
+</odoo>
