@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <odoo>
     <record id="videojuegos_ventas_form" model="ir.ui.view">
-        <field name="name">videojuegos ventas form</field>
+        <field name="name">Videojuegos Ventas Form</field>
         <field name="model">games.ventas</field>
         <field name="arch" type="xml">
             <form string="Ventas">
@@ -30,7 +30,7 @@
         <field name="name">Ventas Tree</field>
         <field name="model">games.ventas</field>
         <field name="arch" type="xml">
-            <tree>
+            <tree string="Ventas">
                 <field name="name"/>
                 <field name="fecha"/>
                 <field name="cliente"/>
@@ -43,6 +43,34 @@
     <record id="videojuegos_ventas_action" model="ir.actions.act_window">
         <field name="name">Ventas</field>
         <field name="res_model">games.ventas</field>
-        <field name="view_mode">tree, form</field>
+        <field name="view_mode">tree,form</field>
     </record>
+
+    <record model="report.paperformat" id="paperformat_ticket">
+        <field name="name">Ticket de pago</field>
+        <field name="default" eval="True"/>
+        <field name="format">custom</field>
+        <field name="page_height">100</field>
+        <field name="page_width">80</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">3</field>
+        <field name="margin_bottom">3</field>
+        <field name="margin_left">3</field>
+        <field name="margin_right">3</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">3</field>
+        <field name="dpi">80</field>
+    </record>
+
+    <report
+        id="videojuegos_ventas_ticket"
+        model="games.ventas"
+        string="Ticket"
+        report_type="qweb-pdf"
+        name="games.videojuegos_ventas_ticket"
+        file="games.videojuegos_ventas_ticket"
+        attachment_use="False"
+        paperformat="games.paperformat_ticket"
+    />
+
 </odoo>

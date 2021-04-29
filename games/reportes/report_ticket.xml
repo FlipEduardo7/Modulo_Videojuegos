@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="videojuegos_ventas_ticket">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <div class="page">
+                        <p>Ticket de venta</p>
+                        <span t-field="o.name"/>
+                    </div>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>
