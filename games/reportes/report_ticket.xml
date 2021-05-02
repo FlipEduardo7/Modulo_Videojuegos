@@ -7,6 +7,9 @@
                     <div class="page">
                         <p>Ticket de venta</p>
                         <span t-field="o.name"/>
+                         <p style="text-align:center;margin-top:0">Fecha de impresión: <span t-field="o.fecha"/></p>
+
+                         <p style="text-align:center;margin-top:0">cliente: <span t-field="o.cliente"/></p>
                     </div>
                 </t>
             </t>

@@ -17,6 +17,7 @@
                             <tree string="Productos" editable="top">
                                 <field name="name" />
                                 <field name="precio" />
+                                <field name="stock" />
                                 <field name="costo" />
                                 <field name="tipo" />
                             </tree>
@@ -59,6 +60,8 @@
                 <field name="costo"/>
                 <label for="tipo">Tipo</label>
                 <field name="tipo"/>
+                <label for="stock">Existencia</label>
+                <field name="stock"/>
                 <label for="clasif">Clasificacion</label>
                 <field name="clasif"/>
             </form>
@@ -78,6 +81,18 @@
                 <field name="stock"/>
                 <field name="clasif"/>
             </tree>
+        </field>
+    </record>
+
+    <record id="videojuegos_productos_search" model="ir.ui.view">
+        <field name="name">Busqueda</field>
+        <field name="model">games.productos</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="precio"/>
+                <field name="tipo"/>
+                <field name="clasif"/>
+            </search>
         </field>
     </record>
 

@@ -12,5 +12,7 @@
         <menuitem name="Procesos" id="videojuegos_menu_procesos" parent="videojuegos_menu"  sequence="20"/>
         <menuitem name="Ventas" id="videojuegos_ventas_menu" action="videojuegos_ventas_action" parent="videojuegos_menu_procesos" sequence="0"/>
 
+        <menuitem name="Rentas" id="videojuegos_rentas_menu" action="videojuegos_rentas_action" parent="videojuegos_menu_procesos" sequence="1"/>
+
     </data>
 </odoo>

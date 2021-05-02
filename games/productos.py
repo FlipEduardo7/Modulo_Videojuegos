@@ -18,4 +18,4 @@ class productos(models.Model):
     stock = fields.Integer('Existencia')
     tipo = fields.Selection([('fis','Fisico'),('dig','Digital')],'Tipo',default='fis',required=True)
     clasif = fields.Many2one('games.clasificaciones',string='clasificacion', required=True)
-    _sql_constraints = [('name_unique', 'unique(name)', 'el cliente esta duplicado')]
+    _sql_constraints = [('name_unique', 'unique(name)', 'el Producto esta duplicado')]

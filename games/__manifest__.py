@@ -6,6 +6,7 @@
     'depends':['base'],
     'data':[
         'reportes/report_ticket.xml',
+        'views/rentas_view.xml',
         'views/productos_view.xml',
         'views/ventas_view.xml',
         'views/menu_view.xml',
