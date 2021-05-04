@@ -5,6 +5,7 @@
     'website':'www.juegos.com',
     'depends':['base'],
     'data':[
+        'reportes/report_renta.xml',
         'reportes/report_ticket.xml',
         'views/rentas_view.xml',
         'views/productos_view.xml',

@@ -46,7 +46,7 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-<!--
+
     <record model="report.paperformat" id="paperformat_ticket">
         <field name="name">Ticket de pago</field>
         <field name="default" eval="True"/>
@@ -72,6 +72,6 @@
         file="games.videojuegos_rentas_ticket"
         attachment_use="False"
         paperformat="games.paperformat_ticket"
-    /> -->
+    /> 
 
 </odoo>

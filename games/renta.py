@@ -1,4 +1,4 @@
-from odoo import models, fields
+from odoo import models, fields, api
 
 class clientes2(models.Model):
     _name = 'games.cliente'

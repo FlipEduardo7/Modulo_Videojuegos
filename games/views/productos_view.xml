@@ -5,25 +5,25 @@
         <field name="model">games.clasificaciones</field>
         <field name="arch" type="xml">
             <form string="Clasificaciones">
-               <!-- <group name="group_top"> -->
-                    <group>
-                        <field name="name"/>
-                    </group>
-                    <group>
-                        <field name="productos" widget="many2many"/>
-                    </group>
-                    <group colspan="12">
-                        <field name="producto_ids" nolabel="1">
-                            <tree string="Productos" editable="top">
-                                <field name="name" />
-                                <field name="precio" />
-                                <field name="stock" />
-                                <field name="costo" />
-                                <field name="tipo" />
-                            </tree>
-                        </field>
-                    </group>
-             <!--   </group>-->
+                <!-- <group name="group_top"> -->
+                <group>
+                    <field name="name"/>
+                </group>
+                <group>
+                    <field name="productos" widget="many2many"/>
+                </group>
+                <group colspan="12">
+                    <field name="producto_ids" nolabel="1">
+                        <tree string="Productos" editable="top">
+                            <field name="name" />
+                            <field name="precio" />
+                            <field name="stock" />
+                            <field name="costo" />
+                            <field name="tipo" />
+                        </tree>
+                    </field>
+                </group>
+                <!--   </group>-->
             </form>
         </field>
     </record>
@@ -52,18 +52,20 @@
                 <group colspan="12">
                     <field name="foto" widget="image" class="oe_avatar oe_left"/>
                 </group>
-                <label for="name">Nombre</label>
-                <field name="name"/>
-                <label for="precio">Precio</label>
-                <field name="precio"/>
-                <label for="costo">Costo</label>
-                <field name="costo"/>
-                <label for="tipo">Tipo</label>
-                <field name="tipo"/>
-                <label for="stock">Existencia</label>
-                <field name="stock"/>
-                <label for="clasif">Clasificacion</label>
-                <field name="clasif"/>
+                <group colspan="12">
+                    <label for="name">Nombre</label>
+                    <field name="name"/>
+                    <label for="precio">Precio</label>
+                    <field name="precio"/>
+                    <label for="costo">Costo</label>
+                    <field name="costo"/>
+                    <label for="tipo">Tipo</label>
+                    <field name="tipo"/>
+                    <label for="stock">Existencia</label>
+                    <field name="stock"/>
+                    <label for="clasif">Clasificacion</label>
+                    <field name="clasif"/>
+                </group>
             </form>
         </field>
     </record>
