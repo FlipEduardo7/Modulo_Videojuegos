@@ -11,7 +11,6 @@ class ventas(models.Model):
     name = fields.Char('Folio', required=True)
     fecha = fields.Datetime('Fecha', required=True)
     cliente = fields.Many2one('games.clientes', string='Cliente', required=True)
-    total = fields.Float('Total', readonly=True)
     productos = fields.One2many('games.ventas_det', 'venta', string='Productos')
     tipos = fields.Selection([('cre', 'Creada'), ('gen', 'Generada'), ('can', 'Cancelada')],'Estado', default='gen', readonly=True)
     _sql_constraints = [('venta_name_unique', 'unique(name)', 'La venta esta duplicada')]
@@ -29,3 +28,5 @@ class ventas_det(models.Model):
     def cal_importe(self):
         for rec in self:
             rec.importe = rec.cantidad * rec.precio
+
+    

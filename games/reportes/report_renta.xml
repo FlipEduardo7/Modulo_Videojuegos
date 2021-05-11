@@ -23,11 +23,12 @@
                                 <td style="text-align:right">Importe</td>
                             </tr>
                             <tr t-foreach="o.productos" t-as="pago">
-                                <td><t t-esc="pago.precio"/></td>
+                                <td><t t-esc="pago.producto.name"/></td>
                                 <td style="text-align:right"><t t-esc="pago.cantidad"/></td>
                                 <td style="text-align:right"><t t-esc="'%.2f' % pago.importe"/></td>
                             </tr>
                          </table>
+                          <p style="text-align:center;margin-top:0">Gracias por su renta!!!</p>
                     </div>
                 </t>
             </t>

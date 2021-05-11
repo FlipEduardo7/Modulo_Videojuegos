@@ -10,7 +10,6 @@
                     <field name="fecha"/>
                     <field name="cliente"/>
                     <field name="tipos"/>
-                    <field name="total"/>
                 </group>
                 <group>
                     <field name="productos" nolabel="1">
@@ -35,7 +34,6 @@
                 <field name="fecha"/>
                 <field name="cliente"/>
                 <field name="tipos"/>
-                <field name="total"/>
             </tree>
         </field>
     </record>
