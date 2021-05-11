@@ -8,6 +8,7 @@
                 <group>
                     <field name="name"/>
                     <field name="fecha"/>
+                    <field name="fechafin"/>
                     <field name="cliente"/>
                     <field name="tipos"/>
                     <field name="total"/>
@@ -33,6 +34,7 @@
             <tree string="Rentas">
                 <field name="name"/>
                 <field name="fecha"/>
+                <field name="fechafin"/>
                 <field name="cliente"/>
                 <field name="tipos"/>
                 <field name="total"/>
