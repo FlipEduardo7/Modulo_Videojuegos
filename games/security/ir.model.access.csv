@@ -1,8 +1,2 @@
 id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
-access_games_group_admin,games.ventas.usuario,model_games_clientes,games.usuario,1,1,1,0
-access_games_group_user,games.ventas.usuario,model_games_clasificaciones,games.usuario,1,1,1,0
-access_games_group_user2,games.ventas.usuario,model_games_ventas_det,games.usuario,1,1,1,1
-access_games_group_user3,games.ventas.usuario,model_games_ventas,games.usuario,1,1,1,0
-access_games_group_user4,games.ventas.usuario,model_games_productos,games.usuario,1,1,1,0
-access_games_group_admin,games.ventas.administrador,model_games_clientes,games.administrador,1,1,1,1
-access_games_group_admin,games.ventas.administrador,model_games_clientes,games.administrador,1,1,1,1
+access_games_group_user,games.ventas.usuario,venta_id,base.group_user,1,1,1,1

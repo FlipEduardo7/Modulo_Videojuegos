@@ -5,7 +5,7 @@
         <menuitem name="Videojuegos LTC" id="videojuegos_menu" sequence="20"/>
         <menuitem name="Catalogos" id="videojuegos_menu_catalogos" parent="videojuegos_menu" sequence="10"/>
 
-        <menuitem name="Categoria" id="videojuegos_clasificaciones_menu"  action="videojuegos_clasificaciones_action" parent="videojuegos_menu_catalogos"  sequence="40"/>
+        <menuitem name="Clasificaciones" id="videojuegos_clasificaciones_menu"  action="videojuegos_clasificaciones_action" parent="videojuegos_menu_catalogos"  sequence="40"/>
         
         <menuitem name="Productos" id="videojuegos_productos_menu"  action="videojuegos_productos_action" parent="videojuegos_menu_catalogos" sequence="50"/>
     

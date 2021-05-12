@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <record id="videojuegos_id" model="ir.module.category">
-            <field name="name">Videojuegos</field>
+        <record id="venta_id" model="ir.module.category">
+            <field name="name">Ventas</field>
         </record>
-        <record id="administrador" model="res.groups">
+        <record id="ventas_admin_id" model="res.groups">
             <field name="name">Administrador</field>
-            <field name="category_id" ref="videojuegos_id"/>
+            <field name="category_id" ref="venta_id"/>
         </record>
-        <record id="usuario" model="res.groups">
+        <record id="ventas_user_id" model="res.groups">
             <field name="name">Usuario</field>
-            <field name="category_id" ref="videojuegos_id"/>
+            <field name="category_id" ref="venta_id"/>
         </record>
     </data>
 </odoo>

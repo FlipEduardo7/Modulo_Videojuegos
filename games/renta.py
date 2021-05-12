@@ -9,7 +9,6 @@ class rentas(models.Model):
     _name = 'games.rentas'
     name = fields.Char('Folio', required=True)
     fecha = fields.Datetime('Fecha', required=True)
-    fechafin = fields.Datetime('Fecha de Devolucion', required=True)
     cliente = fields.Many2one('games.clientes', string='Cliente', required=True)
     total = fields.Float('Total', readonly=True)
     productos = fields.One2many('games.ventas_det', 'venta', string='Productos')
