@@ -11,13 +11,13 @@ class rentas(models.Model):
     fecha = fields.Datetime('Fecha', required=True)
     cliente = fields.Many2one('games.clientes', string='Cliente', required=True)
     total = fields.Float('Total', readonly=True)
-    productos = fields.One2many('games.ventas_det', 'venta', string='Productos')
+    productos = fields.One2many('games.rentas_det', 'venta', string='Productos')
     tipos = fields.Selection([('cre', 'Creada'), ('gen', 'Generada'), ('can', 'Cancelada')],'Estado', default='gen')
     _sql_constraints = [('venta_name_unique', 'unique(name)', 'La venta esta duplicada')]
 
 class rentas_det(models.Model):
     _name = 'games.rentas_det'
-    venta = fields.Many2one('games.ventas', string='venta', required=True)
+    venta = fields.Many2one('games.rentas', string='venta', required=True)
     producto = fields.Many2one('games.productos', string='producto', required=True)
     cantidad = fields.Integer('Cantidad', default=1)
     precio = fields.Float('Precio')

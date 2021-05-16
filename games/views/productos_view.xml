@@ -53,17 +53,17 @@
                     <field name="foto" widget="image" class="oe_avatar oe_left"/>
                 </group>
                 <group colspan="12">
-                    <label for="name">Nombre</label>
+                    
                     <field name="name"/>
-                    <label for="precio">Precio</label>
+                    
                     <field name="precio"/>
-                    <label for="costo">Costo</label>
+                    
                     <field name="costo"/>
-                    <label for="tipo">Tipo</label>
+                    
                     <field name="tipo"/>
-                    <label for="stock">Existencia</label>
+
                     <field name="stock"/>
-                    <label for="clasif">Clasificacion</label>
+                    
                     <field name="clasif"/>
                 </group>
             </form>
